@@ -1,4 +1,4 @@
-package com.panshi.test;
+package com.panshi.common;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;

@@ -1,7 +1,7 @@
 package com.panshi.dao.impl;
 
 import com.panshi.dao.StudentDao;
-import com.panshi.test.Sql;
+import com.panshi.common.Sql;
 import com.panshi.vo.Student;
 import org.apache.ibatis.session.SqlSession;
 
@@ -10,11 +10,16 @@ import java.util.List;
 public class StudentDaoImpl implements StudentDao {
 
     @Override
-    public List<Student> query() {
+    public List<Student> query(Student stu) {
         SqlSession session = Sql.getSqlSF().openSession();
-        List<Student> list = session.selectList("findAllStu");
+        List<Student> list = session.selectList("findAllStu",stu);
         session.close();
         return list;
+    }
+
+    @Override
+    public List<Student> findAllStu(Student stu) {
+        return null;
     }
 
     @Override

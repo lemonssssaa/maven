@@ -12,6 +12,8 @@ public class Student {
 
     private String name;
 
+    private int age;
+
     List<Tec> tec;
 
 }

@@ -6,7 +6,8 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 public interface StudentDao {
-    List<Student> query();
+    List<Student> query(Student stu);
+    List<Student> findAllStu(Student stu);
     List<Student> queryAll();
     int addStu();
     int delStu();

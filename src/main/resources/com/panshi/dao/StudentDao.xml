@@ -21,7 +21,18 @@
                 name = #{name}
             </if>
             <if test="age != null and age!=''">
-                age = #{age}
+                and age = #{age}
+            </if>
+        </where>
+    </select>
+    <select id="findAllStu" resultType="com.panshi.vo.Student">
+        SELECT id,name,age FROM test
+        <where>
+            <if test="name != null and name!=''">
+                name = #{name}
+            </if>
+            <if test="age != null and age!=''">
+                and age = #{age}
             </if>
         </where>
     </select>

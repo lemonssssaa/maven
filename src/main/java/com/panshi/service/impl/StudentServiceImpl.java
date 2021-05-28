@@ -12,6 +12,15 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> findAllStu() {
-        return dao.query();
+        return dao.queryAll();
+    }
+
+    @Override
+    public List<Student> query(Student s) {
+        List<Student> list = dao.query(s);
+        if(list == null || list.isEmpty()){
+            return null;
+        }
+        return list;
     }
 }
