@@ -15,22 +15,20 @@
 
 
     <select id="query" resultType="com.panshi.vo.Student">
-        SELECT * FROM test
+        SELECT id,name,age FROM test
         <where>
-            <choose>
-                <when test="name != null and name != ''">
-                    AND name like "%"#{name}"%"
-                </when>
-                <otherwise>
-                    and id = 1
-                </otherwise>
-            </choose>
+            <if test="name != null and name!=''">
+                name = #{name}
+            </if>
+            <if test="age != null and age!=''">
+                age = #{age}
+            </if>
         </where>
     </select>
     <insert id="addStu" parameterType="List">
-        insert into test (name) values
+        insert into test (name,age) values
         <foreach collection="list" item="item" index="index" separator=",">
-            (#{item.name})
+            (#{item.name},#{item.age})
         </foreach>
     </insert>
     <delete id="delStu" parameterType="List">
