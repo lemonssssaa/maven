@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class Tec {
-
-    private String name;
+    private int tid;
+    private String tname;
 }

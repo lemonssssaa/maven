@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface StudentDao {
     List<Student> query();
+    List<Student> queryAll();
     int addStu();
     int delStu();
     int updStu();

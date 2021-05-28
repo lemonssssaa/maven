@@ -18,6 +18,11 @@ public class StudentDaoImpl implements StudentDao {
     }
 
     @Override
+    public List<Student> queryAll() {
+        return null;
+    }
+
+    @Override
     public int addStu() {
         return 0;
     }

@@ -12,6 +12,9 @@
 
     <!-- 配置环境 -->
     <properties resource="config.properties"/>
+    <typeAliases>
+        <package name="com.panshi.vo"/>
+    </typeAliases>
     <environments default="mysql">
 
         <!-- 配置mysql的环境-->
