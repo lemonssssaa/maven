@@ -11,6 +11,6 @@ import java.util.List;
 public class Test {
     public static void main(String[] args) {
         SqlSession session = Sql.getSqlSF().openSession();
-        System.out.println(JSONObject.toJSONString(session.selectList("queryAll")));
+        System.out.println(JSONObject.toJSONString(session.selectList("query","_".replaceAll("[_%]",""))));
     }
 }
