@@ -6,7 +6,15 @@
 <mapper namespace="com.panshi.dao.StudentDao">
 
     <select id="query" resultType="com.panshi.vo.Student">
-        SELECT * FROM test;
+        SELECT * FROM test
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+        </where>
     </select>
     <insert id="addStu" parameterType="List">
         insert into test (name) values
