@@ -17,10 +17,6 @@ public class StudentDaoImpl implements StudentDao {
         return list;
     }
 
-    @Override
-    public List<Student> findAllStu(Student stu) {
-        return null;
-    }
 
     @Override
     public List<Student> queryAll() {

@@ -25,11 +25,10 @@ public class StudentController extends HttpServlet {
 
         }else if(crud.equals("query")){
             String stu = req.getParameter("stu");
-            System.out.println(stu);
-
             Student s =JSONObject.toJavaObject(JSONObject.parseObject(stu),Student.class);
             List<Student> list = ss.query(s);
             resp.getWriter().write(JSONObject.toJSONString(list));
         }
+
     }
 }

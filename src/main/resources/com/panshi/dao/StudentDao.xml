@@ -26,20 +26,9 @@
             </if>
         </where>
     </select>
-    <select id="findAllStu" resultType="com.panshi.vo.Student">
-        SELECT id,name,age FROM test
-        <where>
-            <if test="name != null and name!=''">
-                name = #{name}
-            </if>
-            <if test="age != null and age!=''">
-                and age = #{age}
-            </if>
-        </where>
-    </select>
     <insert id="addStu" parameterType="List">
         insert into test (name,age) values
-        <foreach collection="list" item="item" index="index" separator=",">
+        <foreach collection="list" item="item" index="index" separator=",">22
             (#{item.name},#{item.age})
         </foreach>
     </insert>
