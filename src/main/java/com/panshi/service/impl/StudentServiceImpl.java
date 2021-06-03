@@ -10,14 +10,12 @@ import org.apache.ibatis.session.SqlSession;
 import java.util.List;
 
 public class StudentServiceImpl implements StudentService {
-    private StudentDao dao = new StudentDaoImpl();
-
-
+    private SqlSession sqlSession = Sql.getSqlSF().openSession();
+    private StudentDao dao= sqlSession.getMapper(StudentDao.class);
 
     @Override
     public List<Student> findAllStu() {
         return dao.queryAll();
-
     }
 
     @Override
