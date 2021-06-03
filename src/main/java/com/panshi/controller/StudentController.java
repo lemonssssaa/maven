@@ -24,7 +24,7 @@ public class StudentController extends HttpServlet {
         }else if(crud.equals("upd")){
 
         }else if(crud.equals("query")){
-            String stu = req.getParameter("stu");
+            String stu = req.getParameter( "stu");
             Student s =JSONObject.toJavaObject(JSONObject.parseObject(stu),Student.class);
             List<Student> list = ss.query(s);
             resp.getWriter().write(JSONObject.toJSONString(list));
