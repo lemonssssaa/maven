@@ -13,7 +13,7 @@ public class Sql {
         if(!(sqlSessionFactory == null)){
             return sqlSessionFactory;
         }
-        String resource = "com/panshi/dao/SqlMapConfig.xml";
+        String resource = "SqlMapConfig.xml";
         InputStream inputStream = null;
         try {
             inputStream = Resources.getResourceAsStream(resource);

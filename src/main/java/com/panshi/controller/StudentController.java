@@ -16,19 +16,6 @@ public class StudentController extends HttpServlet {
     private StudentService ss = new StudentServiceImpl();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String crud = req.getParameter("crud");
-        if(crud.equals("add")){
-
-        }else if(crud.equals("del")){
-
-        }else if(crud.equals("upd")){
-
-        }else if(crud.equals("query")){
-            String stu = req.getParameter( "stu");
-            Student s =JSONObject.toJavaObject(JSONObject.parseObject(stu),Student.class);
-            List<Student> list = ss.query(s);
-            resp.getWriter().write(JSONObject.toJSONString(list));
-        }
 
     }
 }

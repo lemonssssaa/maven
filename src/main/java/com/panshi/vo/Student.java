@@ -3,17 +3,14 @@ package com.panshi.vo;
 import lombok.Data;
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Data
-@ToString(exclude = "tec")
-public class Student {
-    private int id;
-
-    private String name;
-
-    private int age;
-
-    List<Tec> tec;
+public class Student implements Serializable {
+    private int sid;
+    private String sname;
+    private int sage;
+    private String address;
 
 }

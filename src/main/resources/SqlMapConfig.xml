@@ -12,6 +12,15 @@
 
     <!-- 配置环境 -->
     <properties resource="config.properties"/>
+    <settings>
+        <!-- 打开延迟加载 的开关 -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!-- 将积极加载改为消极加载即按需要加载 -->
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <!--- 开启全局缓存开关 -->
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+
     <typeAliases>
         <package name="com.panshi.vo"/>
     </typeAliases>
@@ -47,9 +56,7 @@
     <!-- 指定映射配置文件的位置，映射配置文件指的是每个dao独立的配置文件 -->
 
     <mappers>
-
-        <mapper resource="com/panshi/dao/StudentDao.xml"></mapper>
-
+        <package name="com/panshi/mapper"/>
     </mappers>
 
 </configuration>
