@@ -20,6 +20,7 @@
         <result column = "auid"    property = "auid"/>
         <result column = "money"    property = "money"/>
     </resultMap>
+
     <select id="queryUser" resultMap="userResultMap">
         select u.id 'uid',u.username,u.birthday,u.sex,u.address from user u
     </select>

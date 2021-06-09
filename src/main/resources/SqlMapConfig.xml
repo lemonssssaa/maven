@@ -13,7 +13,7 @@
     <!-- 配置环境 -->
     <properties resource="config.properties"/>
     <settings>
-        <!-- 打开延迟加载 的开关 -->
+        <!-- 打开延迟加载的开关 -->
         <setting name="lazyLoadingEnabled" value="true"/>
         <!-- 将积极加载改为消极加载即按需要加载 -->
         <setting name="aggressiveLazyLoading" value="false"/>

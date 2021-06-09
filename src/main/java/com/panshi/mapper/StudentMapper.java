@@ -11,3 +11,4 @@ public interface StudentMapper {
     List<User> queryUser();
     List<Account> queryAccoutByUid();
 }
+
